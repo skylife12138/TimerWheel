@@ -48,7 +48,11 @@ class GlobalTimer
     bool Cascade(int base, int index);
     void AddTimerImpl(GTimerList *t1);
 
-    struct list_head mRotary[256 * 4];
+    static const int TM_BITS = 8;
+    static const int TM_SIZE = 1 << TM_BITS;
+    static const int TM_MASK = TM_SIZE-1;
+
+    struct list_head mRotary[TM_SIZE * 4];
     int mGTick;
     int mSize;
     struct list_head mErase;
