@@ -3,5 +3,12 @@
     "files.associations": {
         "limits": "cpp",
         "type_traits": "cpp"
-    }
+    },
+    "cmake.autoRestartBuild": true,
+    "workbench.sideBar.location": "left",
+    "workbench.colorTheme": "Monokai Dimmed",
+    "explorer.confirmDelete": false,
+    "cmake.cmakePath": "C:/Program Files/CMake/bin/cmake",
+    "cmake.configureOnOpen": true,
+    "editor.fontSize": 15,
 }

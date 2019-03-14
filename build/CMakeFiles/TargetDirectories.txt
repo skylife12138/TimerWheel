@@ -1,0 +1,3 @@
+/testpro/TimerWheel/build/CMakeFiles/edit_cache.dir
+/testpro/TimerWheel/build/CMakeFiles/rebuild_cache.dir
+/testpro/TimerWheel/build/CMakeFiles/TimerWheel.dir

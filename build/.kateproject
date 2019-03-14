@@ -1,0 +1,19 @@
+{
+	"name": "TimerWheel@build",
+	"directory": "D:/github/TimerWheel",
+	"files": [ { "git": 1 } ],
+	"build": {
+		"directory": "D:/github/TimerWheel/build",
+		"default_target": "all",
+		"clean_target": "clean",
+		"build": "C:/PROGRA~1/LLVM/bin/mingw32-make.exe -C \"D:/github/TimerWheel/build\"  all",
+		"clean": "C:/PROGRA~1/LLVM/bin/mingw32-make.exe -C \"D:/github/TimerWheel/build\"  clean",
+		"quick": "C:/PROGRA~1/LLVM/bin/mingw32-make.exe -C \"D:/github/TimerWheel/build\"  install",
+		"targets":[
+			 {"name":"all", "build_cmd":"C:/PROGRA~1/LLVM/bin/mingw32-make.exe -C \"D:/github/TimerWheel/build\"  all"}
+			,{"name":"clean", "build_cmd":"C:/PROGRA~1/LLVM/bin/mingw32-make.exe -C \"D:/github/TimerWheel/build\"  clean"}
+			,{"name":"TimerWheel", "build_cmd":"C:/PROGRA~1/LLVM/bin/mingw32-make.exe -C \"D:/github/TimerWheel/build\"  TimerWheel"}
+			,{"name":"TimerWheel/fast", "build_cmd":"C:/PROGRA~1/LLVM/bin/mingw32-make.exe -C \"D:/github/TimerWheel/build\"  TimerWheel/fast"}
+			,{"name":"rebuild_cache", "build_cmd":"C:/PROGRA~1/LLVM/bin/mingw32-make.exe -C \"D:/github/TimerWheel/build\"  rebuild_cache"}
+	] }
+}

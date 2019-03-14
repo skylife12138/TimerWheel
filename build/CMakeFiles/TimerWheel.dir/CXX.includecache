@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/testpro/TimerWheel/List.h
+linux/types.h
+-
+linux/stddef.h
+-
+linux/poison.h
+-
+linux/const.h
+-
+linux/kernel.h
+-
+
+/testpro/TimerWheel/TimeWheel.cpp
+TimeWheel.h
+/testpro/TimerWheel/TimeWheel.h
+
+/testpro/TimerWheel/TimeWheel.h
+List.h
+/testpro/TimerWheel/List.h
+stddef.h
+-
+assert.h
+-
+
+/testpro/TimerWheel/main.cpp
+iostream
+-
+time.h
+-
+TimeWheel.h
+/testpro/TimerWheel/TimeWheel.h
+

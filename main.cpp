@@ -19,11 +19,17 @@ static void MainFree(void* p,int size)
     free(p);
 }
 
+static void TestPrint(GlobalTimer* gtimer,GTimerList* t1,void* udata,int size)
+{
+    cout << "testprint right!!!" << endl;
+}
+
 int main()
 {
+    cout << "TimeWheel Begin" << endl;
     GlobalTimer * GTimer = new GlobalTimer(GetMinSecond(), MainAlloc, MainFree);
-    int* udata=GTimer->InitTimer<int>(1000, NULL, NULL);
-    while(true)
+    int* udata=GTimer->InitTimer<int>(10, TestPrint, NULL);
+    while(GTimer->Size()>0)
     {
         GTimer->Tick(GetMinSecond());
     }
