@@ -153,7 +153,13 @@ void GlobalTimer::Tick(int gtick)
 #define INDEX(n) ((mGTick>>(TM_BITS*n)&TM_MASK))
 void GlobalTimer::OneTick()
 {
-    int index = mGTick & TM_MASK;
+    /*
+    每次tick都是从数组前256(0~255)个格子取数据，当时间mGtick每次到256的倍数时，即index==0，
+    就从(256~511)(512~767)(768~1023)中通过当前剩余的超时时间重新分配各个定时器所在的数组格子。
+    注意：每个高一层的数组格子，例如(256~511)相对于(0~255)就为高一层，高层中每个格子上存储的为
+    定时器就可以覆盖到低一层的所有256个格子，例如expire==(256,257,...,511)都是在mRotary[256+1]中
+    */
+    int index = mGTick & TM_MASK; 
     if(index==0 && Cascade(TM_SIZE,INDEX(1)) && Cascade(TM_SIZE*2,INDEX(2)))
     {
         Cascade(TM_SIZE * 3, INDEX(3));
