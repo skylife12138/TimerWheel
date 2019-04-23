@@ -111,7 +111,7 @@ void GlobalTimer::DestoryTimer(GTimerList *t1)
 void GlobalTimer::AddTimerImpl(GTimerList *t1)
 {
     int expire = t1->Expire;
-    int dt = t1->Delta;
+    int dt = expire-mGTick;
     list_head *entry;
     if(dt < TM_SIZE)
     {
